@@ -7,9 +7,9 @@ function Header() {
   return (
     <header className="header">
        <NavBar/>
-       <div>
+       <a href='/' className='logo'>
            TIENDA VIRTUAL
-       </div>
+       </a>
        <Carrito/>
     </header>
   );

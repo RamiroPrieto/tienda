@@ -13,7 +13,13 @@ function NavBar() {
 
   return (
     <div className="navBar">
-        <button onClick={abrirMenu}>NavBar</button>
+        <button onClick={abrirMenu}>
+          <svg className='hamburger' fill='white' viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </button>
         {openMenu && 
             <ul className='menu' id='menu' >
                 <li className='menu__lista'><a href="/"> Descuentos </a></li>

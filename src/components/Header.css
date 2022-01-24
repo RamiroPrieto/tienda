@@ -1,17 +1,19 @@
 .header{
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 60px;
     background-color: rgb(113, 113, 146);
     align-items: center;
     padding: 0px 50px;
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu{
     position: absolute;
     background-color: rgb(113, 113, 146);
     left: 0%;
+    top: 44px;
     height: auto;
     width: 200px;
 }
@@ -35,10 +37,24 @@ a{
 }
 
 
+button{
+    background: transparent;
+    border: none;
 
+}
+
+.hamburger{
+    height: 30px;
+    width: 30px;
+}
 
 .carrito{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.logo{
     color: white;
+    font-weight: 500;
+    font-size: 25px;
 }
