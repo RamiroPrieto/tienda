@@ -1,3 +1,11 @@
 .body{
   height: 817px;
+  display: flex;
+  
+}
+
+.itemContainer{
+  margin: auto;
+  font-size: 30px;
+  color: rgb(113, 113, 146);
 }

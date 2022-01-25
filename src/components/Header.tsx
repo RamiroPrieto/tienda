@@ -3,12 +3,16 @@ import NavBar from './NavBar';
 import './Header.css'
 import Carrito from './Carrito'
 
-function Header() {
+interface props{
+  name : string;
+}
+
+function Header({ name } : props) {
   return (
     <header className="header">
        <NavBar/>
        <a href='/' className='logo'>
-           TIENDA VIRTUAL
+          {name}
        </a>
        <Carrito/>
     </header>
