@@ -5,7 +5,10 @@
 }
 
 .itemContainer{
-  margin: auto;
   font-size: 30px;
-  color: rgb(113, 113, 146);
+}
+
+.itemList{
+  display: flex;
+  gap: 20px;
 }
