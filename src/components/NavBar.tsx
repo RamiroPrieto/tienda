@@ -22,11 +22,11 @@ function NavBar() {
         </button>
         {openMenu && 
             <ul className='menu' id='menu' >
-                <li className='menu__lista'><a href="/"> Descuentos </a></li>
-                <li className='menu__lista'><a href="/"> Remeras </a></li>
-                <li className='menu__lista'><a href="/"> Buzos </a></li>
-                <li className='menu__lista'><a href="/"> Zapatillas </a></li>
-                <li className='menu__lista'><a href="/"> Contacto </a></li>
+                <li key="descuentos" className='menu__lista'><a href="/"> Descuentos </a></li>
+                <li key="remeras" className='menu__lista'><a href="/"> Remeras </a></li>
+                <li key="buzos" className='menu__lista'><a href="/"> Buzos </a></li>
+                <li key="zapatillas" className='menu__lista'><a href="/"> Zapatillas </a></li>
+                <li key="contacto" className='menu__lista'><a href="/"> Contacto </a></li>
         </ul>}
     </div>  
   );

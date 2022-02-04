@@ -10,7 +10,6 @@ interface item{
 }
 
 function Item(props : item) {
-  console.log(props);
 
   return (
 
