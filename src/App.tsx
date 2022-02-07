@@ -18,7 +18,7 @@ function App() {
         <div className='body'>
           <Routes>
             <Route path='/' element={ <ItemListContainer/> }/>
-            <Route path='/detail/:id' element={ <ItemDetail/> }/>
+            <Route path='/detail/:idItem' element={ <ItemDetail/> }/>
           </Routes>
         </div>
         <Footer/>
