@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 interface item{
     name: string;
@@ -9,7 +10,18 @@ interface item{
     image: string;
 }
 
+
+
 function Item(props : item) {
+  
+  const params = useParams();
+  // console.log(params);
+
+  const [link, setLink] = useState("/detail");
+
+  useEffect( () => {
+    setLink(`/detail/${props.id}`);
+  })
 
   return (
 
@@ -19,7 +31,7 @@ function Item(props : item) {
         <div>Nombre: {props.name}</div>
         <div>Descripcion: {props.description}</div>
         <div>Precio: {props.price}</div>
-        <button>Ver Detalle</button>
+        <Link to={link} className='link__detalle'>Ver Detalle</Link>
     </div>
   );
 }
