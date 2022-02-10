@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { item } from './Interfaces';
 
-interface item{
-    name: string;
-    price: Number;
-    img: String;
-    description: String;
-    id: Number;
-    image: string;
-}
+
 
 
 

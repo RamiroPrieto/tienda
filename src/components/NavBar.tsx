@@ -22,11 +22,8 @@ function NavBar() {
         </button>
         {openMenu && 
             <ul className='menu' id='menu' >
-                <li key="descuentos" className='menu__lista'><a href="/"> Descuentos </a></li>
-                <li key="remeras" className='menu__lista'><a href="/"> Remeras </a></li>
-                <li key="buzos" className='menu__lista'><a href="/"> Buzos </a></li>
-                <li key="zapatillas" className='menu__lista'><a href="/"> Zapatillas </a></li>
-                <li key="contacto" className='menu__lista'><a href="/"> Contacto </a></li>
+                <li key="remeras" className='menu__lista'><a href="/category/remeras"> Remeras </a></li>
+                <li key="buzos" className='menu__lista'><a href="/category/buzos"> Buzos </a></li>
         </ul>}
     </div>  
   );

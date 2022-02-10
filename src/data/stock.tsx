@@ -1,30 +1,37 @@
-export const stock = [
+import { item } from "../components/Interfaces";
+
+export const stock : item[] = [
     {
         id: 1,
-        descripcion: "Descripcion de producto 1",
-        nombre: "Producto 1",
-        precio: 1500,
-        img: "https://via.placeholder.com/150"
+        description: "Descripcion de producto 1",
+        name: "Producto 1",
+        price: 1500,
+        image: "https://via.placeholder.com/150",
+        category: "buzos"
     },
     {
         id: 2,
-        descripcion: "Descripcion de producto 2",
-        nombre: "Producto 2",
-        precio: 23230,
-        img: "https://via.placeholder.com/150"
+        description: "Descripcion de producto 2",
+        name: "Producto 2",
+        price: 23230,
+        image: "https://via.placeholder.com/150",
+        category: "buzos"
     },
     {
         id: 3,
-        descripcion: "Descripcion de producto 3",
-        nombre: "Producto 3",
-        precio: 13241,
-        img: "https://via.placeholder.com/150"
+        description: "Descripcion de producto 3",
+        name: "Producto 3",
+        price: 13241,
+        image: "https://via.placeholder.com/150",
+        category: "remeras"
     },
+
     {
         id: 4,
-        descripcion: "Descripcion de producto 4",
-        nombre: "Producto 4",
-        precio: 12341,
-        img: "https://via.placeholder.com/150"
+        description: "Descripcion de producto 4",
+        name: "Producto 4",
+        price: 12341,
+        image: "https://via.placeholder.com/150",
+        category: "remeras"
     }
 ]

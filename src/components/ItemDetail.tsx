@@ -6,24 +6,10 @@ import { getStock } from '../helpers';
 
 function ItemDetail() {
 
-  const { idItem } = useParams();
-
-  const [item, setItem] = useState();
-
-  useEffect( () => {
-    getStock
-      .then(( res ) => 
-        console.log( res )
-      )
-      .catch(( err ) =>
-        console.log( err )
-      )
-
-  })
 
   return (
     <div className='itemDetail'>
-        Detalle item {idItem}
+        Detalle item
     </div>
   );
 }
