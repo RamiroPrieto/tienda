@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getItemByCategory } from '../helpers';
+import { getItemByCategory, getStock, getItems } from '../helpers';
 import { item } from './Interfaces';
 import ItemList from './ItemList';
 
@@ -23,23 +23,31 @@ function ItemListContainer() {
   //   setOcultar(true);
   // });
 
-  const [ productos  ,  setProductos ] = useState();
+  const [ stock  ,  setStock ] = useState<item[]>( [] );
 
   
   useEffect( () => {
     if(categoria.category){
       const items : item[] = getItemByCategory(categoria.category);
-      // setProductos(items);
-      console.log(items);
+      setStock(items);
+    }else{
+      const items : item[] = getItems();
+      setStock(items);
+
     }
     
-  }, [])
+  }, [categoria.category])
+  
+  useEffect( () =>{
+    // console.log(stock);
 
+  }, [stock])
+  
   
   return (
     <div className='itemContainer'>
         {ocultar && 
-        <ItemList   />}
+        <ItemList stock={stock} />}
     </div>
   );
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import { stock } from '../data/stock';
 import Item from './Item';
+import { item } from './Interfaces';
 
+interface props{
+  stock: item[];
+}
 
-
-function ItemList() {
+function ItemList( {stock} : props) {
 
 
   return (

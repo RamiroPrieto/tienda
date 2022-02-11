@@ -8,8 +8,6 @@ import { item } from './Interfaces';
 
 function Item(props : item) {
   
-  const params = useParams();
-  // console.log(params);
 
   const [link, setLink] = useState("/detail");
 
