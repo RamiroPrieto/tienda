@@ -13,11 +13,19 @@ function ItemDetail( {producto} : producto ) {
 
   return (
     <div className='itemDetail'>
-        {producto?.description}
-        {producto?.id}
-        {producto?.name}
-        {producto?.price}
-        {producto?.category}
+      <img src={producto?.image} alt="" />
+      <div className='itemDetail__punto'>
+        Nombre del producto: {producto?.name}
+      </div>
+      <div className='itemDetail__punto'>
+        Precio: {producto?.price}
+      </div>
+      <div className='itemDetail__punto'>
+        Descripcion: {producto?.description}
+      </div>
+      <div className='itemDetail__punto'>
+        Categoria: {producto?.category}
+      </div>
     </div>
   );
 }

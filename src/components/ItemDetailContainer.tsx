@@ -13,17 +13,24 @@ function ItemDetailContainer() {
     
     const [item, setItem] = useState<item>(  );
 
-    // if(idItem){
-    // const id : number = parseInt(idItem);
-    // }
-
+    let id : number = 0;
+    
+    if(idItem){
+        id = parseInt(idItem);
+    }
     
     useEffect( () => {
-        let items : item[] = getStock(); 
+        let items : item[] = [];
+        getStock.then(res =>{
+            setTimeout(()=>{
 
-        let prod : item | undefined = getItem(3 , items);
-
-        setItem(prod);
+                items = res; 
+                let prod : item | undefined = getItem(id , items);
+                
+                setItem(prod);
+            }, 2000)
+        })
+        
 
     }, [])
     
