@@ -13,25 +13,13 @@ function ItemListContainer() {
   
   const categoria = useParams();
   
-  const delay = new Promise( (resolve, reject) => {
-    setTimeout(() => {
-        resolve('Promesa resuelta');
-    }, 2000)
-  })
-  
   
   const [ stock  ,  setStock ] = useState<item[]>( [] );
   
-  // useEffect(()=>{
-  //   delay.then( resolve =>{
-  //     setOcultar(true);
-  //   });
-  // }, [ocultar])
   
   useEffect( () => {
      getProductos
       .then( resolve => {
-        setTimeout(()=>{
           if(categoria.category){
             const items : item[] = getItemByCategory(categoria.category, resolve);
             setStock(items);
@@ -40,7 +28,6 @@ function ItemListContainer() {
             setStock(items);
             
           }
-        }, 2000)
       })
     
   }, [categoria.category])

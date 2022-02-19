@@ -7,7 +7,8 @@ export const stock : item[] = [
         name: "Producto 1",
         price: 1500,
         image: "https://via.placeholder.com/150",
-        category: "buzos"
+        category: "buzos",
+        stock: 20
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const stock : item[] = [
         name: "Producto 2",
         price: 23230,
         image: "https://via.placeholder.com/150",
-        category: "buzos"
+        category: "buzos",
+        stock: 20
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ export const stock : item[] = [
         name: "Producto 3",
         price: 13241,
         image: "https://via.placeholder.com/150",
-        category: "remeras"
+        category: "remeras",
+        stock: 20
     },
 
     {
@@ -32,6 +35,7 @@ export const stock : item[] = [
         name: "Producto 4",
         price: 12341,
         image: "https://via.placeholder.com/150",
-        category: "remeras"
+        category: "remeras",
+        stock: 20
     }
 ]

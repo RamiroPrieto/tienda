@@ -16,3 +16,7 @@
 .link__detalle{
   color: black;
 }
+
+.counterContainer{
+  display: flex;
+}

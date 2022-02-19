@@ -22,13 +22,10 @@ function ItemDetailContainer() {
     useEffect( () => {
         let items : item[] = [];
         getStock.then(res =>{
-            setTimeout(()=>{
-
                 items = res; 
                 let prod : item | undefined = getItem(id , items);
                 
                 setItem(prod);
-            }, 2000)
         })
         
 
