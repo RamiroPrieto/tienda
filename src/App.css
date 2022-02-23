@@ -20,3 +20,7 @@
 .counterContainer{
   display: flex;
 }
+
+.imagen__item{
+  width: 330px;
+}

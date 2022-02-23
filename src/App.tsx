@@ -22,7 +22,6 @@ function App() {
   const clearCarrito = () => {
     setCart(['']);
   }
-
   console.log(cart);
 
 

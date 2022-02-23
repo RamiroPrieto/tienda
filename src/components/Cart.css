@@ -1,0 +1,28 @@
+.cart__item{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+}
+.cart__titulo{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.cart__boton{
+    font-size: 40px;
+    padding: 3px 10px;
+    background-color: rgb(113, 113, 146);
+    color: white;
+}
+
+.cart__boton:hover{
+    border: 1px solid black;
+}

@@ -41,6 +41,7 @@ function ItemDetail( {producto} : producto ) {
 
   }
   
+
   return (
     <div className='itemDetail'>
       <img src={producto?.image} alt="" />
