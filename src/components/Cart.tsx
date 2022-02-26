@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { CarContext } from './Context';
 import ItemCart from './ItemCart';
 import './Cart.css'
+import { Link } from 'react-router-dom';
 
 function Cart() {
 
@@ -9,17 +10,25 @@ function Cart() {
 
   const [exist, setExist] = useState<boolean>(false);
 
-  console.log(cart)
+  const [total, setTotal] = useState<number>(0);
+
+
+  // console.log(cart)
   useEffect(()=>{
     if(cart.length != 0){
       setExist(true);
     }else{
       setExist(false)
     }
-
+    var tot : number = 0;
+    tot = cart.forEach((car) => tot + car.price);
+    console.log(tot);
+    setTotal(tot);
   }, [])
 
-  console.log(exist)
+
+
+  // console.log(exist)
     return (
         <>
         { exist ?
@@ -37,10 +46,14 @@ function Cart() {
           </div>
           :
           <div className='cart__titulo'>
-            No hay items en el carro
-          </div>
+            
+            <div>No hay items en el carro</div> 
 
+            <Link to={"/"}>Volver al inicio</Link>
+          </div>
+          
         }
+        
       </>
     );
 }
