@@ -7,15 +7,13 @@ import { item } from './Interfaces';
 function ItemCart( item : item ) {
 
 
-    const {cart, setCart} = useContext(CarContext);
+    const {cart, setCart} = useContext( CarContext );
     
     const eliminarItem = () =>{
-        const array : item[] = cart.filter(cart => cart.id === item.id)
-        console.log(array)
-        setCart(array);
+        setCart( cart.filter((prod) => prod.id !== item.id) )
     }
   
-
+    
     return (
         <>
             <div className='cart__item'>
@@ -25,7 +23,7 @@ function ItemCart( item : item ) {
                 <div>
                     {item.price}$
                 </div>
-                <button onClick={eliminarItem}>X</button>
+                <button className='x_boton' onClick={eliminarItem}>X</button>
             </div>
         </>
     );

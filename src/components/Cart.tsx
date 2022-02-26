@@ -10,7 +10,7 @@ function Cart() {
 
   const [exist, setExist] = useState<boolean>(false);
 
-  const [total, setTotal] = useState<number>(0);
+  const [total, setTotal] = useState<number>();
 
 
   // console.log(cart)
@@ -20,12 +20,14 @@ function Cart() {
     }else{
       setExist(false)
     }
-    var tot : number = 0;
-    tot = cart.forEach((car) => tot + car.price);
-    console.log(tot);
-    setTotal(tot);
-  }, [])
 
+  }, [cart])
+  
+  useEffect(()=>{
+    var tot :number = cart.reduce((acc, prod) => acc + prod.cant * prod.price, 0);
+  
+    setTotal(tot)
+  })
 
 
   // console.log(exist)
@@ -38,10 +40,10 @@ function Cart() {
             </div>
             {cart.map((item) => <ItemCart name={item.name} stock={item.stock} category={item.category} price={item.price} image={item.image} id={item.id} description={item.description} />)}
             <div className='cart__titulo'>
-              Total de la compra:  $
+              Total de la compra: {total} $
             </div>
             <button className='cart__boton' type='submit'>
-              Terminar compra
+              Terminar compra 
             </button>
           </div>
           :

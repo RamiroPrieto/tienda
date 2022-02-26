@@ -24,3 +24,7 @@
 .imagen__item{
   width: 330px;
 }
+
+.x_boton{
+  border: 1px solid black;
+}
