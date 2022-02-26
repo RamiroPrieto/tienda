@@ -4,7 +4,7 @@ export interface item{
     price ?: number;
     category ?: string;
     description ?: string;
-    id ?: number;
+    id ?: string;
     image ?: string;
     stock ?: number
 }

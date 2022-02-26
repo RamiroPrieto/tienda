@@ -1,7 +1,6 @@
 import { type } from 'os';
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getStock } from '../helpers';
 import { CarContext } from './Context';
 import { item } from './Interfaces';
 import ItemCount from './ItemCount';

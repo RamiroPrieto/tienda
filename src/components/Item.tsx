@@ -19,7 +19,7 @@ function Item(props : item) {
 
     <div className='item'>
         <img className='imagen__item' src={props.image} alt={props.name} />
-        <div>Id: {props.id}</div>
+        {/* <div>Id: {props.id}</div> */}
         <div>Nombre: {props.name}</div>
         <div>Descripcion: {props.description}</div>
         <div>Precio: {props.price}</div>

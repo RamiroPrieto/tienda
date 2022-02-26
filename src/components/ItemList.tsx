@@ -1,5 +1,4 @@
 import React from 'react';
-import { stock } from '../data/stock';
 import Item from './Item';
 import { item } from './Interfaces';
 

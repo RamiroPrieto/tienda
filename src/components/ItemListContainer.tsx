@@ -1,7 +1,9 @@
+ import { collection , getDocs , query , where } from 'firebase/firestore';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getItemByCategory, getStock, getItems, getProductos } from '../helpers';
+import { db } from '../firebase/config';
+import { getItemByCategory } from '../helpers';
 import { item } from './Interfaces';
 import ItemList from './ItemList';
 
@@ -13,24 +15,25 @@ function ItemListContainer() {
   
   const categoria = useParams();
   
-  
+  console.log(categoria)
   const [ stock  ,  setStock ] = useState<item[]>( [] );
   
-  
   useEffect( () => {
-     getProductos
-      .then( resolve => {
-          if(categoria.category){
-            const items : item[] = getItemByCategory(categoria.category, resolve);
-            setStock(items);
-          }else{
-            const items : item[] = resolve;
-            setStock(items);
-            
+    const productosRef = collection(db, 'productos');
+    const q = categoria.category ? query(productosRef, where('category', "==", categoria.category)) : productosRef;
+    getDocs(q)
+      .then((resp) => {
+        setStock(resp.docs.map((doc) => {
+          return{
+            id : doc.id,
+            ...doc.data()
           }
+        }));
       })
-    
-  }, [categoria.category])
+
+
+
+  }, [])
   
   useEffect( () =>{
     // console.log(stock);
