@@ -12,6 +12,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { CarContext } from './components/Context';
 import { item } from './components/Interfaces';
 import Cart from './components/Cart';
+import { Checkout } from './components/Checkout';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path='/detail/:idItem' element={ <ItemDetailContainer/> }/>
               <Route path='/category/:category' element={ <ItemListContainer/> }/>
               <Route path='/cart' element={ <Cart/> }/>
+              <Route path='/checkout' element={ <Checkout/> }/>
             </Routes>
           </div>
           <Footer/>

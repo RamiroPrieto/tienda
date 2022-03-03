@@ -15,7 +15,7 @@ function Cart() {
 
   // console.log(cart)
   useEffect(()=>{
-    if(cart.length != 0){
+    if(cart.length !==  0){
       setExist(true);
     }else{
       setExist(false)
@@ -42,9 +42,9 @@ function Cart() {
             <div className='cart__titulo'>
               Total de la compra: {total} $
             </div>
-            <button className='cart__boton' type='submit'>
+            <Link to="/checkout" className='cart__boton' type='submit'>
               Terminar compra 
-            </button>
+            </Link>
           </div>
           :
           <div className='cart__titulo'>
